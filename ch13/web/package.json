@@ -6,11 +6,15 @@
   "author": "Gabriel Schenker",
   "license": "ISC",
   "scripts": {
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "express": "^4.14.1",
     "mustache-express": "^1.2.4",
-    "pg": "^7.4.1"
-  }
+    "pg": "^7.4.1",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
